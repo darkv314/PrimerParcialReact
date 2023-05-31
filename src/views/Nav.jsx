@@ -49,7 +49,10 @@ function Nav({ setNavMenu, setPageState, setLayoutState }) {
                 />
                 <IconButton
                     icon={<LogOut />}
-                    onClick={() => setPageState(0)}
+                    onClick={() => {
+                        localStorage.removeItem("user");
+                        setPageState(0);
+                    }}
                     style={{ width: "35px", height: "35px" }}
                 />
             </div>

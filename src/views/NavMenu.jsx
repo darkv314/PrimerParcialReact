@@ -52,6 +52,7 @@ function NavMenu({ setPageState, setNavMenu, setLayoutState }) {
                 <NavLink
                     text="Logout"
                     onClick={() => {
+                        localStorage.removeItem("user");
                         setPageState(0);
                         setNavMenu(false);
                     }}
