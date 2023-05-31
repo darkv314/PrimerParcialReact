@@ -13,12 +13,14 @@ function Inicio() {
             ? JSON.parse(localStorage.getItem("posts"))
             : []
     );
+    const [reversedPosts, setReversedPosts] = useState([...posts].reverse());
     const [parent, enableAnimations] = useAutoAnimate();
     const [activePost, setActivePost] = useState(false);
     const { user } = JSON.parse(localStorage.getItem("user"));
 
     useEffect(() => {
-        localStorage.setItem("posts", JSON.stringify(posts));
+        setReversedPosts([...posts].reverse());
+        localStorage.setItem("posts", JSON.stringify(reversedPosts));
     }, [posts]);
 
     return (
@@ -53,7 +55,8 @@ function Inicio() {
                         {"No hay posts disponibles :("}
                     </h2>
                 )}
-                {posts.map((post) => (
+
+                {reversedPosts.map((post) => (
                     <Post
                         key={post.id}
                         title={post.title}
