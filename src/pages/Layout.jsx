@@ -4,12 +4,11 @@ import NavMenu from "../views/NavMenu";
 import { useState } from "react";
 import Inicio from "./Inicio";
 import Perfil from "./Perfil";
-import Market from "./Market";
 
 function Layout({ setPageState }) {
     const [navMenu, setNavMenu] = useState(false);
     const [layoutState, setLayoutState] = useState(0);
-    const layout = [<Inicio key={0} />, <Perfil key={1} />, <Market key={2} />];
+    const layout = [<Inicio key={0} />, <Perfil key={1} />];
 
     return (
         <div className="min-h-screen bg-slate-200">
