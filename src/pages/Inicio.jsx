@@ -48,6 +48,11 @@ function Inicio() {
                 ref={parent}
                 className="py-2 flex flex-col gap-4 w-full items-center h-full"
             >
+                {posts.length === 0 && (
+                    <h2 className="text-2xl">
+                        {"No hay posts disponibles :("}
+                    </h2>
+                )}
                 {posts.map((post) => (
                     <Post
                         key={post.id}
