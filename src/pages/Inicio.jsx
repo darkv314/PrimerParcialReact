@@ -44,7 +44,7 @@ function Inicio() {
                 )}
             </AnimatePresence>
             <h1 className="self-center text-4xl font-bold py-4 text-center">{`Bienvienido ${user}`}</h1>
-            <p className="self-center">
+            <p className="self-center text-center">
                 Número total de caracteres en los posts:{" "}
                 {posts.reduce((acc, current) => acc + current.body.length, 0)}
             </p>
