@@ -11,7 +11,7 @@ import IconButton from "../components/IconButton";
 
 function Nav({ setNavMenu, setPageState, setLayoutState }) {
     return (
-        <nav className="flex justify-between p-4 bg-gray-800 items-center text-teal-500">
+        <nav className="sticky top-0 flex justify-between p-4 bg-gray-800 items-center text-teal-500">
             <span className="hidden sm:block">
                 <IconButton
                     icon={<Jellyfish />}

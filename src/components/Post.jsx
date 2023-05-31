@@ -10,7 +10,7 @@ function Post({ title, body, owner, id, setPosts }) {
     const [postMenu, setPostMenu] = useState(false);
     const { user } = JSON.parse(localStorage.getItem("user"));
     return (
-        <div className="bg-gray-800 py-2 px-3 grid gap-2 rounded-md w-60 sm:w-80 md:w-96 lg:w-100 relative">
+        <div className="bg-gray-800 py-2 px-3 grid gap-2 rounded-md w-4/5 sm:w-9/12 relative">
             <AnimatePresence>
                 {editPost && (
                     <Modal setModal={setEditPost}>
