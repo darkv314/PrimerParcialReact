@@ -38,6 +38,11 @@ function NewPostForm({ setModal, setPosts, edit, id, title, body }) {
                     })
                 );
             }
+            alert(
+                `Post ${edit ? "editado" : "creado"} con éxito: ${
+                    data[0].value
+                }`
+            );
             setModal(false);
         }
     }
