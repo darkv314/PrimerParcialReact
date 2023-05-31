@@ -16,13 +16,13 @@ function NewPostForm({ setModal, setPosts, edit, id, title, body }) {
         if (data.length === 2) {
             if (!edit) {
                 setPosts((prev) => [
-                    ...prev,
                     {
                         id: prev.length + data[0]?.value,
                         title: data[0].value,
                         body: data[1].value,
                         user: JSON.parse(localStorage.getItem("user")).user,
                     },
+                    ...prev,
                 ]);
             } else {
                 setPosts((prev) =>

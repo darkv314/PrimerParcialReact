@@ -13,14 +13,12 @@ function Inicio() {
             ? JSON.parse(localStorage.getItem("posts"))
             : []
     );
-    const [reversedPosts, setReversedPosts] = useState([...posts].reverse());
     const [parent, enableAnimations] = useAutoAnimate();
     const [activePost, setActivePost] = useState(false);
     const { user } = JSON.parse(localStorage.getItem("user"));
 
     useEffect(() => {
-        setReversedPosts([...posts].reverse());
-        localStorage.setItem("posts", JSON.stringify(reversedPosts));
+        localStorage.setItem("posts", JSON.stringify(posts));
     }, [posts]);
 
     return (
@@ -46,6 +44,10 @@ function Inicio() {
                 )}
             </AnimatePresence>
             <h1 className="self-center text-4xl font-bold py-4 text-center">{`Bienvienido ${user}`}</h1>
+            <p className="self-center">
+                Número total de caracteres en los posts:{" "}
+                {posts.reduce((acc, current) => acc + current.body.length, 0)}
+            </p>
             <section
                 ref={parent}
                 className="py-2 flex flex-col gap-4 w-full items-center h-full"
@@ -56,7 +58,7 @@ function Inicio() {
                     </h2>
                 )}
 
-                {reversedPosts.map((post) => (
+                {posts.map((post) => (
                     <Post
                         key={post.id}
                         title={post.title}

@@ -65,7 +65,7 @@ function Post({ title, body, owner, id, setPosts }) {
                     <h2 className="text-gray-200 break-words">{title}</h2>
                 </span>
             </div>
-            <p className="text-gray-200 overflow-y-auto break-words scrollbar">
+            <p className="text-gray-200 overflow-y-auto break-words scrollbar max-h-40">
                 {body}
             </p>
         </div>
