@@ -20,7 +20,7 @@ function Modal({ children, setModal }) {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="fixed w-full h-full top-0 bg-black-transparent  grid right-0 place-items-center p-2 z-30"
+            className="fixed w-full h-full top-0 bg-black-transparent  grid right-0 place-items-center p-2 z-40"
             onClick={() => setModal(false)}
         >
             <span className="absolute top-4 right-4 text-white">

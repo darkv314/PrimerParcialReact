@@ -15,7 +15,7 @@ function NavMenu({ setPageState, setNavMenu, setLayoutState }) {
 
     return (
         <div
-            className="fixed top-0 z-20 w-full h-full bg-black-transparent"
+            className="fixed top-0 z-30 w-full h-full bg-black-transparent"
             onClick={handleOutsideClick}
         >
             <motion.div
