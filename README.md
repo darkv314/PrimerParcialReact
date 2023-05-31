@@ -14,7 +14,7 @@ El proyecto se divide en 4 carpetas principales:
   - Aquí se encuentran todos los componentes que se reutilizan a lo largo de las páginas. Ejemplos de estos pueden ser los Inputs, los Botones, el modal, etc.
 - helpers
   - Esta carpeta contiene un documento con el regex para verificar los emails validos.
-##Requisitos
+## Requisitos
 La aplicación debe cumplir con los siguientes requisitos para ser considerada como completa:
 - Conceptos de React y JS
   - Uso de los hooks useState y useEffect para controlar el contenido y el comportamiento de la página.
